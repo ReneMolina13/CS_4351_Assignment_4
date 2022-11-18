@@ -1,0 +1,4 @@
+I have received a few requests that the "openssl ca" command states error that it does not find "./demoCA". This is mostly related to the folder structure that you have for this lab. 
+You need to follow a strict folder structure. I am attaching a diagram that you can follow in order to successfully execute the command. In this case, CA directory is mostly for the certificate authority and Bank32 is for the company who is requesting for a certificate. You can notice that CA follows a strict folder structure. the serial (all lowercase) file should have a number in it (e.g. 1000). 
+
+When you are running the "openssl ca" command, you need to "cd $HOME/PKI_lab/CA/". This command will generate the Bank32.crt file, which you can use in the browser to create https connection to www.bank32.com.
